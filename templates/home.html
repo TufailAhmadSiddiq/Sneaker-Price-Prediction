@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+    <head>
+        <meta charset="utf-8">
+        <title>Sneaker Price Prediction</title>
+    </head>
+
+    <style>
+
+            .headline {
+            position: fixed;
+            top: 5%;
+            left: 37%;
+            right: 20%;}
+
+            .orderDateHeadline {
+            position: fixed;
+            top: 15%;
+            left: 45%;
+            right: 20%;}
+
+            .orderDateInput {
+            position: fixed;
+            top: 20%;
+            left: 40%;
+            right: 45%;}
+
+            .releaseDateHeadline {
+            position: fixed;
+            top: 25%;
+            left: 45%;
+            right: 20%;}
+
+            .releaseDateInput {
+            position: fixed;
+            top: 30%;
+            left: 40%;
+            right: 45%;}
+
+            .brandHeadline {
+            position: fixed;
+            top: 35%;
+            left: 46%;
+            right: 45%;}
+
+            /* .brandYeezy {
+            position: fixed;
+            top: 40%;
+            left: 40%;
+            right: 45%;}
+
+            .brandOffwhite {
+            position: fixed;
+            top: 40%;
+            left: 45%;
+            right: 45%;} */
+
+            .brandOption {
+            position: fixed;
+            top: 40%;
+            left: 40%;
+            right: 45%;}
+
+            .sneakerHeadline {
+            position: fixed;
+            top: 45%;
+            left: 45%;
+            right: 45%;}
+
+            .sneakerOption {
+            position: fixed;
+            top: 50%;
+            left: 40%;
+            right: 45%;}
+
+            .shoeHeadline {
+            position: fixed;
+            top: 55%;
+            left: 46%;
+            right: 45%;}
+
+            .shoeOption {
+            position: fixed;
+            top: 60%;
+            left: 40%;
+            right: 45%;}
+
+            .buyerHeadline {
+            position: fixed;
+            top: 65%;
+            left: 45%;
+            right: 45%;}
+
+            .buyerInput {
+            position: fixed;
+            top: 70%;
+            left: 40%;
+            right: 45%;}
+
+            .retailHeadline {
+            position: fixed;
+            top: 75%;
+            left: 45%;
+            right: 40%;}
+
+            .retailInput {
+            position: fixed;
+            top: 80%;
+            left: 40%;
+            right: 45%;}
+
+            .submit {
+            position: fixed;
+            top: 90%;
+            left: 40%;
+            right: 45%;}
+
+    </style>
+  
+    <body style="background-color: rgb(0, 0, 150);">
+
+        <form action="prediction" method="post">
+
+            <h1 class='headline' style="color: azure;"> Sneaker Price Prediction </h1>
+            <h4 class='orderDateHeadline' style="color: azure;"> Order Date </h4>
+            <!--<label for="Order Date" style="color: azure">Order Date: </label>-->
+            <input class='orderDateInput' type="date" id="Order Date" name="Order Date">
+
+            <h4 class="releaseDateHeadline" style="color: azure;"> Release Date </h4>
+            <!--<label for="Release Date" style="color: azure">Release Date: </label>-->
+            <input class="releaseDateInput" type="date" id="Release Date" name="Release Date">
+
+            <h4 class="brandHeadline" style="color: azure;"> Brand </h4>
+            <!-- <input class="brandYeezy" type="radio" name="Brand" value="Yeezy"> Yeezy
+            <input class="brandOffwhite" type="radio" name="Brand" value="Off-White"> Off-White -->
+            <select class="brandOption" name="Brand" id="Sneakers">
+                <option value="Yeezy">Yeezy</option>
+                <option value="Off-White">Off-White</option>
+            </select>
+
+
+            <h4 class="sneakerHeadline" style="color: azure;"> Sneaker Name </h4>
+            <!--<label for="Sneaker Name" style="color: azure;">Sneaker Name:</label><br>-->
+            <select class="sneakerOption" name="Sneaker Name" id="Sneakers">
+                <option value="adidas Yeezy Boost 350 V2 Butter">adidas Yeezy Boost 350 V2 Butter</option>
+                <option value="Adidas Yeezy Boost 350 V2 Beluga 2pt0">Adidas Yeezy Boost 350 V2 Beluga 2pt0</option>
+                <option value="Adidas Yeezy Boost 350 V2 Zebra">Adidas Yeezy Boost 350 V2 Zebra</option>
+                <option value="Adidas Yeezy Boost 350 V2 Blue Tint">Adidas Yeezy Boost 350 V2 Blue Tint</option>
+                <option value="Adidas Yeezy Boost 350 V2 Cream White">Adidas Yeezy Boost 350 V2 Cream White</option>
+                <option value="Adidas Yeezy Boost 350 V2 Sesame">Adidas Yeezy Boost 350 V2 Sesame</option>
+                <option value="adidas Yeezy Boost 350 V2 Static">adidas Yeezy Boost 350 V2 Static</option>
+                <option value="Adidas Yeezy Boost 350 V2 Semi Frozen Yellow">Adidas Yeezy Boost 350 V2 Semi Frozen Yellow</option>
+                <option value="Air Jordan 1 Retro High Off White University Blue">Air Jordan 1 Retro High Off White University Blue</option>
+                <option value="adidas Yeezy Boost 350 V2 Static Reflective">adidas Yeezy Boost 350 V2 Static Reflective</option>
+                <option value="Nike Air Presto Off White Black 2018">Nike Air Presto Off White Black 2018</option>
+                <option value="Nike Air Presto Off White White 2018">Nike Air Presto Off White White 2018</option>
+                <option value="Nike Air VaporMax Off White 2018">Nike Air VaporMax Off White 2018</option>
+                <option value="Nike Blazer Mid Off White All Hallows Eve">Nike Blazer Mid Off White All Hallows Eve</option>
+                <option value="Nike Blazer Mid Off White Grim Reaper">Nike Blazer Mid Off White Grim Reaper</option>
+                <option value="Nike Zoom Fly Off White Pink">Nike Zoom Fly Off White Pink</option>
+                <option value="Nike Air VaporMax Off White Black">Nike Air VaporMax Off White Black</option>
+                <option value="Nike Zoom Fly Off White Black Silver">Nike Zoom Fly Off White Black Silver</option>
+                <option value="Nike Air Force 1 Low Off White Volt">Nike Air Force 1 Low Off White Volt</option>
+                <option value="Adidas Yeezy Boost 350 V2 Core Black Red 2017">Adidas Yeezy Boost 350 V2 Core Black Red 2017</option>
+                <option value="Nike Air Force 1 Low Off White Black White">Nike Air Force 1 Low Off White Black White</option>
+                <option value="Air Jordan 1 Retro High Off White Chicago">Air Jordan 1 Retro High Off White Chicago</option>
+                <option value="Nike Air Max 90 Off White Black">Nike Air Max 90 Off White Black</option>
+                <option value="Nike Zoom Fly Mercurial Off White Total Orange">Nike Zoom Fly Mercurial Off White Total Orange</option>
+                <option value="Nike Air Max 90 Off White Desert Ore">Nike Air Max 90 Off White Desert Ore</option>
+                <option value="Nike Zoom Fly Mercurial Off White Black">Nike Zoom Fly Mercurial Off White Black</option>
+                <option value="Nike Air Max 90 Off White">Nike Air Max 90 Off White</option>
+                <option value="Adidas Yeezy Boost 350 V2 Core Black White">Adidas Yeezy Boost 350 V2 Core Black White</option>
+                <option value="Nike Air Presto Off White">Nike Air Presto Off White</option>
+                <option value="Nike Air Max 97 Off White">Nike Air Max 97 Off White</option>
+                <option value="Nike Air VaporMax Off White">Nike Air VaporMax Off White</option>
+                <option value="Nike Blazer Mid Off White">Nike Blazer Mid Off White</option>
+                <option value="Adidas Yeezy Boost 350 Low V2 Beluga">Adidas Yeezy Boost 350 Low V2 Beluga</option>
+            </select>
+
+            <h4 class="shoeHeadline" style="color: azure;"> Shoe Size </h4>
+            <!--<label for="Shoe Size" style="color: azure;">Shoe Size:</label><br>-->
+            <select class="shoeOption" name="Shoe Size" id="Shoe Size">
+                <option value="3.5">3.5</option>
+                <option value="4.0">4.0</option>
+                <option value="4.5">4.5</option>
+                <option value="5.0">5.0</option>
+                <option value="5.5">5.5</option>
+                <option value="6.0">6.0</option>
+                <option value="6.5">6.5</option>
+                <option value="7.0">7.0</option>
+                <option value="7.5">7.5</option>
+                <option value="8.0">8.0</option>
+                <option value="8.5">8.5</option>
+                <option value="9.0">9.0</option>
+                <option value="9.5">9.5</option>
+                <option value="10.0">10.0</option>
+                <option value="10.5">10.5</option>
+                <option value="11.0">11.0</option>
+                <option value="11.5">11.5</option>
+                <option value="12.0">12.0</option>
+                <option value="12.5">12.5</option>
+                <option value="13.0">13.0</option>
+                <option value="13.5">13.5</option>
+                <option value="14.0">14.0</option>
+                <option value="14.5">14.5</option>
+                <option value="15.0">15.0</option>
+                <option value="16.0">16.0</option>
+                <option value="17.0">17.0</option>
+            </select>
+
+            <h4 class="buyerHeadline" style="color: azure;"> Buyer Region</h4>
+            <!--<label for="Buyer Region" style="color: azure;">Buyer Region:</label><br>-->
+            <input class="buyerInput" type="text" name="Buyer Region" placeholder="US State" required="required" />
+
+
+            <h4 class="retailHeadline" style="color: azure;"> Retail Price ($)</h4>
+            <!--<label for="Retail Price ($)" style="color: azure;">Retail Price ($):</label><br>-->
+            <input class="retailInput" type="number" name="Retail Price" placeholder="Retail Price" required="required" />
+
+            <h4></h4>
+            <input class="submit" type="submit">
+            
+        </form>
+    </body>
+
+</html>
